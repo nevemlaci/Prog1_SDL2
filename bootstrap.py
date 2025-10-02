@@ -47,10 +47,10 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python download_deps.py [mingw|msvc]")
         sys.exit(1)
-
+    valid_toolchains = ['mingw', 'msvc', 'unix']
     toolchain = sys.argv[1].lower()
-    if toolchain not in URLS:
-        print("First parameter must be 'mingw' or 'msvc'")
+    if toolchain not in valid_toolchains:
+        print("First parameter must be {}".format(valid_toolchains))
         sys.exit(1)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
