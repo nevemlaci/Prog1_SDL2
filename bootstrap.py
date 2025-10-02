@@ -56,7 +56,8 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # Collect URLs to download
-    urls = URLS[toolchain] + [EXTRA_URL]
+    if(toolchain in URLS):
+        urls = URLS[toolchain] + [EXTRA_URL]
     if toolchain == "unix":
         urls = [EXTRA_URL]
     for url in urls:
