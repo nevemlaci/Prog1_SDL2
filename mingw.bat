@@ -1,1 +1,1 @@
-python .\bootstrap.py mingw
+python3 .\bootstrap.py mingw

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python ./bootsrap.py unix
+python3 ./bootsrap.py unix
