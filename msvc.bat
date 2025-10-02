@@ -1,1 +1,1 @@
-python3 .\bootstrap.py msvc
+python3 bootstrap.py msvc
