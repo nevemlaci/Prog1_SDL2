@@ -57,7 +57,8 @@ def main():
 
     # Collect URLs to download
     urls = URLS[toolchain] + [EXTRA_URL]
-
+    if toolchain == "unix":
+        urls = [EXTRA_URL]
     for url in urls:
         filename = os.path.join(OUTPUT_DIR, os.path.basename(url))
         download_file(url, filename)
